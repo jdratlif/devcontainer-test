@@ -1,0 +1,19 @@
+---
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ..
+      dockerfile: .devcontainer/frontend/Dockerfile
+    command: sleep infinity
+    network_mode: service:backend
+    volumes:
+      - ../..:/workspaces:cached
+  backend:
+    build:
+      context: ..
+      dockerfile: .devcontainer/backend/Dockerfile
+    command: sleep infinity
+    volumes:
+      - ../..:/workspaces:cached

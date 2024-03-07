@@ -1,0 +1,8 @@
+{
+    "name": "backend",
+    "dockerComposeFile": "../docker-compose.yaml",
+    "service": "backend",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}/backend",
+    "forwardPorts": [3000, 8000],
+    "remoteUser": "docker"
+}
